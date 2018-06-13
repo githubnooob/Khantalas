@@ -1,0 +1,59 @@
+.fileNameInput
+{
+	margin-top: 20px;
+}
+
+.taskStateDropDown
+{
+	margin-left: 10px;
+}
+
+.textMessage
+{
+	width: 30%;
+	margin-left: 20px;
+	font-family: monospace;
+	line-height: 1.2em;
+}
+
+.fileChooser
+{
+	margin-top: 20px;
+	width: 50%;
+	margin-left: 10px;
+}
+
+.addFilesMessage
+{
+	margin-top: 20px;
+}
+
+.nameKhan
+{
+	font-family: monospace;
+	color: red;
+	line-height: 1.5em;
+}
+
+.nameTalas
+{
+	font-family: monospace;
+	color: blue;
+	line-height: 1.4em;
+}
+
+.jumbotron
+{
+	margin-top: 30px;
+	background: #3e3e3e;
+}
+
+.logoQuote
+{
+	text-align: center;
+}
+
+.smallQuote
+{
+	color: #FFF;
+}
