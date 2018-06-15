@@ -11,7 +11,7 @@
 .textMessage
 {
 	width: 30%;
-	margin-left: 20px;
+	margin-left: 15px;
 	font-family: monospace;
 	line-height: 1.2em;
 }
@@ -64,8 +64,20 @@
 	text-align: center;
 }
 
-#nepaliDateD
+.secondPart
+{
+
+}
+
+
+#reminderHolder
 {
 	margin-top: 20px;
-	
+
+}
+
+#Location
+{
+	width: 40%;
+	margin-top: 10px;
 }

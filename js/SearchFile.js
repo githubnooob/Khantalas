@@ -6,5 +6,15 @@ $(document).ready(function(){
     	console.log("Clicked");
     });
 
+    $('.progress-bar').addClass("short");
+
+
+    let checkDate = (date)=>
+    {
+
+    	
+
+    }
+
 });
 

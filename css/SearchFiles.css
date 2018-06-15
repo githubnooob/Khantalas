@@ -24,3 +24,27 @@
 {
   clear: both;
 }
+
+.progress-bar
+{
+	background: green; 
+}
+
+.long
+{
+	background: green;
+	width: 100%;
+}
+
+.medium
+{
+	background: blue;
+	width: 75%;
+}
+
+
+.short
+{
+	background: yellow;
+	width: 25%;
+}
