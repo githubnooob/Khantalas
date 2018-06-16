@@ -1,9 +1,13 @@
 from flask import Flask, render_template,request,redirect,url_for
 from flask_sqlalchemy import SQLAlchemy
 import datetime
+import os
+import uploadFile
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://///file.db'
+app.config['UPLOAD_FOLDER'] = uploadFile.UPLOAD_FOLDER
+
 db= SQLAlchemy(app)
 
 @app.route("/search/")
@@ -17,13 +21,22 @@ def add():
 
 	if request.method == "POST":
 		filename = request.form.get('filename')
+		filename = filename.encode("utf-8")
 		category  = request.form.get('category')
 		task_state = request.form.get('task_state')
 		message = request.form.get('message')
-		actual_fileName = request.form.get('actual_fileName')
+		actual_fileName = request.form.get('file')
 		reminderDate = request.form.get('reminder_date')
 		location = request.form.get('location')
-		print(filename,category,task_state,message,actual_fileName,reminderDate,location)		
+		print(filename,category,task_state,message,actual_fileName,reminderDate,location)
+        if 'file' in request.files:	
+        	print ("I am in this section")
+	        file = request.files['file']
+	        if filename =="":
+	        	filename = file.filename
+	        print file.filename
+	        if not file.filename == '' and uploadFile.allowed_file(file.filename):
+	        	file.save(os.path.join(os.getcwd()+"/static/js/ViewerJS/Files", filename))	
 		return redirect(url_for('add'))	
 
 	elif request.method =="GET":
