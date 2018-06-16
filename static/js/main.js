@@ -6,9 +6,18 @@ $(document).ready(function(){
 			disableAfter: '12/20/2090'
 		});
 
+
+    let labelForFileName = $('.custom-file-label')
+    let inputFile = $(".custom-file-input");
+    inputFile.change(function(e){
+            let fileName = e.target.files[0].name;
+            labelForFileName.text(fileName);
+		})
     let dropDowns = $('.dropdown-item');
    	let categoryButton = $('.categoryButton');
    	let task_button = $('.taskStateButton');
+
+
  	dropDowns.each( function(index)
  	{
  		
@@ -17,10 +26,13 @@ $(document).ready(function(){
  			if($(this).parent().hasClass('categoryDropDown'))
  			{
  				 categoryButton.text( $(this).text() );
+ 				 $(".category_DropDownValue").attr("value", $(this).text() ); 
  			}
- 			else
+ 			if($(this).parent().hasClass('taskDropDown')) 			
  			{
  				 task_button.text( $(this).text() );
+ 				 $(".taskState_DropDownValue").attr("value", $(this).text() ); 
+
  			}
  			//if( $(this).parent()=="categoryDropDown" )
  		})

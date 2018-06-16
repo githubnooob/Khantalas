@@ -81,3 +81,18 @@
 	width: 40%;
 	margin-top: 10px;
 }
+
+.category_DropDownValue
+{
+	display: none;
+}
+
+.taskState_DropDownValue
+{
+	display: none;
+}
+
+.custom-file-label
+{
+	overflow: hidden;
+}

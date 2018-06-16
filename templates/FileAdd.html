@@ -37,9 +37,10 @@
 
 	<form action="/add" method="post" >
 
+
 		<div class="input-group mb-3 fileNameInput">
 		  <div class="input-group-prepend">
-		    <button name="category" class="btn btn-outline-danger dropdown-toggle categoryButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</button>
+		    <button  class="btn btn-outline-danger dropdown-toggle categoryButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</button>
 		    <div class="dropdown-menu categoryDropDown" >	
 	     		<a class="dropdown-item" href="#">Miscellaneous</a>
 			    <a class="dropdown-item" href="#">Health</a>
@@ -51,6 +52,8 @@
 			    <a class="dropdown-item" href="#">Last</a>
 		    </div>
 		  </div>
+
+		  <input type="text" value="Miscellaneous" name="category" class="category_DropDownValue" >
 			 
 		<input type="text" class="form-control" name="filename" placeholder="Enter the filename" aria-label="Text input with dropdown button">
 		
@@ -62,6 +65,8 @@
 				    <a class="dropdown-item" href="#">Undefined</a>
 				</div>
 		 </div>
+
+		 <input type="text" value="Undefined" name="task_state" class="taskState_DropDownValue" >
 
 
 		</div>
