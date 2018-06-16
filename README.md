@@ -4,7 +4,7 @@ project for  UGC.
 Our project is based on file Search, which will search for files and also create a repository for files that have
 been uploaded, in local computer.
 
-Features of the app includes: 
+FEATURES: 
 
 	1. To be able to search file in easiest way. (Includes category searching, Time interval searching)
 
@@ -19,4 +19,11 @@ Features of the app includes:
 	6. Task State is defined, which states how urgent the task is, and could be later modified, as per need. 
 
 The Project was built with HTML,CSS,Python Framework(Flask), JavaScript. 
+
+
+LICENSE: 
+
+	VIEWERJS
+
+	ViewerJS is a project run by KO GmbH. It is open-source and commercial at the same time.
 

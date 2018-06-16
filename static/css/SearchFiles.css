@@ -1,0 +1,50 @@
+.searchBar
+{
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+.categoryDropDown
+{
+  margin-left: 10px;
+}
+
+.filesGroup
+{
+  margin-top: 40px;
+}
+
+.timeForFile
+{
+  float: right;
+}
+
+.list-group-item-action
+{
+  clear: both;
+}
+
+.progress-bar
+{
+	background: green; 
+}
+
+.long
+{
+	background: green;
+	width: 100%;
+}
+
+.medium
+{
+	background: blue;
+	width: 75%;
+}
+
+
+.short
+{
+	background: yellow;
+	width: 25%;
+}

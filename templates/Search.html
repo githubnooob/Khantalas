@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="shortcut icon" href="{{url_for('static',filename='images/khantalas.png')}}" />	
+	<title> Khantalas - Search </title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/SearchFiles.css')}}">
+</head>
+<body>
+
+<div class="container">
+
+	<div class="searchBar row justify-content-center">
+		 <form class="form-inline my-2 my-lg-0 ">
+	      <input class="form-control mr-2" type="search" placeholder="Input Filename to Search" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
+
+
+	    <div class="dropdown categoryDropDown">
+		  <button class="btn btn-outline-danger dropdown-toggle categoryName " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Category
+		  </button>
+		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    		<a class="dropdown-item" href="#">Last 7 Days</a>
+    		<a class="dropdown-item" href="#">Last Week</a>
+    		<a class="dropdown-item" href="#">Last Month</a>
+
+			<div class="dropdown-divider"></div>
+		    <a class="dropdown-item" href="#">Miscellaneous</a>
+		    <a class="dropdown-item" href="#">Health</a>
+		    <a class="dropdown-item" href="#">Education</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">Urgent Files</a>
+		    <a class="dropdown-item" href="#">Very Urgent Files</a>
+
+
+		  </div>
+		</div>
+    </div>
+
+
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel"> Filename  <span class="badge badge-success">Health</span>   </h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+
+		      <div class="modal-body">
+		        <iframe src = " {{url_for('static',filename='js/ViewerJS/Files/myfile.pdf')}} " width='100%' height='300' allowfullscreen webkitallowfullscreen></iframe>
+		        <label> Time Remaining: 10 days </label>
+		        <div class="progress">
+				  <div class="progress-bar long" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+		      </div>
+
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+    <div class="list-group filesGroup">
+    	
+			 
+	  <a href="#" class="list-group-item list-group-item-action">
+	  	Khelkhud sambhandi file
+	  	<span class="badge badge-primary">Education</span>
+
+	  	<div class="timeForFile">
+	  		2018/5/8
+	  	</div>
+	  </a>
+	  <a href="#" class="list-group-item list-group-item-action">
+	  	Mayor ko file
+	  	<span class="badge badge-success">Health</span>
+
+	  	<div class="timeForFile">
+	  		2018/3/8
+	  	</div>
+	  </a>
+	  <a href="#" class="list-group-item list-group-item-action">
+	  	Rosi Ghaupalika bata aako file
+		<span class="badge badge-danger">Iom</span>
+
+	  	<div class="timeForFile">
+	  		2018/7/8
+	  	</div>
+	  </a>
+	  <a href="#" class="list-group-item list-group-item-action disabled">
+	  	Gau Bikas samitiko file
+		<span class="badge badge-warning">Ioe</span>
+  	
+	  	<div class="timeForFile">
+	  		2018/9/30
+	  	</div>
+	  </a>
+	</div>
+
+	<form action="/add/">
+		<button class="btn btn-primary btn-block"> Add Files </button>
+	</form>
+
+
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script type="text/javascript" src=" {{url_for('static',filename='js/SearchFile.js')}} "></script>
+
+
+
+</body>
+</html>
