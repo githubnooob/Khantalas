@@ -9,9 +9,13 @@ $(document).ready(function(){
 
     let labelForFileName = $('.custom-file-label')
     let inputFile = $(".custom-file-input");
+    let actual_fileName = $(".actual_file");
     inputFile.change(function(e){
             let fileName = e.target.files[0].name;
             labelForFileName.text(fileName);
+            actual_fileName.attr("value",fileName)  ;
+            console.log(fileName);
+
 		})
     let dropDowns = $('.dropdown-item');
    	let categoryButton = $('.categoryButton');

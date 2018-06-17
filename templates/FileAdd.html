@@ -29,13 +29,13 @@
 	</div>
 
 
-
-	<form action="/search">
+<!-- {{url_for('search')}} -->
+	<form action="{{url_for('search')}}">
 		<button class="btn btn-warning btn-block"> Search Instead </button>
 	</form>
 
 
-	<form action="/add" method="post"  enctype="multipart/form-data">
+	<form action="{{url_for('add')}}" method="post"  enctype="multipart/form-data">
 
 
 		<div class="input-group mb-3 fileNameInput">
@@ -95,6 +95,7 @@
 
 		</div>
 
+			    <input type="text" name="actual_filename" class="actual_file">
 
 			<div id="reminderHolder">
 				<label> Reminder Date </label>
